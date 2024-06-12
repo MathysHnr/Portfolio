@@ -7,7 +7,7 @@ function Header() {
       <nav>
         <ul className="header__nav">
           <li>
-            <NavLink className="header__lien">A propos</NavLink>
+            <NavLink className="header__lien">À propos</NavLink>
           </li>
           <li>
             <NavLink className="header__lien">Compétences</NavLink>

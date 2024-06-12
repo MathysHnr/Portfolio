@@ -1,0 +1,93 @@
+.portfolio {
+  padding: 70px 40px;
+}
+
+.portfolio__container {
+  padding: 20px;
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.portfolio__card {
+  width: 330px;
+  height: 380px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  transition: filter 0.3s ease;
+  border-radius: 25px;
+}
+
+.portfolio__img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  filter: brightness(80%);
+}
+
+.portfolio__title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+}
+
+.portfolio__text {
+  font-size: 14px;
+}
+
+.portfolio__btn {
+  background-color: black;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.portfolio__btn:hover {
+  background-color: lighten(black, 5%);
+}
+
+.portfolio__content {
+  position: relative;
+  @include flex-center;
+  flex-direction: column;
+  z-index: 1;
+  color: white;
+  padding: 1rem;
+  transform: translateY(calc(100% - 7.5rem));
+  transition: transform 0.9s ease;
+}
+
+.portfolio__text,
+.portfolio__btn {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+  text-align: center;
+}
+
+.portfolio__card:hover .portfolio__img {
+  filter: brightness(50%);
+}
+
+.portfolio__card:hover .portfolio__content {
+  transform: translateY(calc(100% - 24.5rem));
+  transition-delay: 0.1s;
+}
+
+.portfolio__card:hover .portfolio__text,
+.portfolio__card:hover .portfolio__btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio__btns {
+  display: flex;
+  gap: 20px;
+}
