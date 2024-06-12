@@ -1,0 +1,40 @@
+html {
+  background-color: $tertiary-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: "Poppins", sans-serif;
+}
+
+.header__lien {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  color: $primary-color;
+  position: relative;
+}
+
+.header__lien:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: $secondary-color;
+  transition: width 0.5s ease-out;
+}
+
+.header__lien:hover:after {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
