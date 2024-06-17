@@ -1,13 +1,14 @@
 .competence {
   padding-top: 70px;
-  &__container {
-    padding: 0 20px;
-  }
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 0.15fr);
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    box-shadow: 1px 1px 25px 0 #b8b5ff, 1px 6px 2px 0 rgb(182, 182, 182);
+    border-radius: 25px;
+    margin: 0 5%;
+    padding: 30px;
   }
 }
 
@@ -19,9 +20,8 @@
   border-radius: 25px;
   position: relative;
   overflow: hidden;
-  width: 100px;
   &:hover {
-    border-color: $primary-color;
+    border-color: black;
   }
 
   .competence__card-content {
@@ -36,12 +36,11 @@
       transition: opacity 0.6s;
       position: absolute;
       @include flex-center;
-      text-decoration: underline;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background: $primary-color;
+      background: black;
       color: white;
     }
   }
@@ -49,6 +48,24 @@
   &:hover {
     .competence__card-content span {
       opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .competence {
+    &__card {
+      width: 20%;
+    }
+    span {
+      font-size: calc(0.5rem + 0.8vw);
+    }
+    &__content {
+      margin: 0 1%;
+      padding: 15px 5px;
+    }
+    &__container {
+      padding: 0;
     }
   }
 }

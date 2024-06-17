@@ -1,24 +1,69 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 function Header() {
+  const [isMenuActive, setMenuActive] = useState(true);
+
+  const toggleMenu = () => {
+    setMenuActive(!isMenuActive);
+  };
   return (
     <header className="header">
-      <nav>
-        <ul className="header__nav">
+      <nav
+        className={`${
+          isMenuActive ? "header__nav" : "header__active header__nav"
+        }`}
+      >
+        <h1 className="header__title">Mathys Henneron</h1>
+        <ul>
           <li>
-            <NavLink className="header__lien">À propos</NavLink>
+            <ScrollLink
+              to="about"
+              className="header__lien"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+            >
+              À propos
+            </ScrollLink>
           </li>
           <li>
-            <NavLink className="header__lien">Compétences</NavLink>
+            <ScrollLink
+              to="competences"
+              className="header__lien"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+            >
+              Compétences
+            </ScrollLink>
           </li>
           <li>
-            <NavLink className="header__lien">Portfolio</NavLink>
+            <ScrollLink
+              to="portfolio"
+              className="header__lien"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+            >
+              Portfolio
+            </ScrollLink>
           </li>
           <li>
-            <NavLink className="header__lien">Contact</NavLink>
+            <ScrollLink
+              to="contact"
+              className="header__lien"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+            >
+              Contact
+            </ScrollLink>
           </li>
         </ul>
+        <div className="header__icons" onClick={toggleMenu}>
+          {isMenuActive ? <span>&#9776;</span> : <span>&#10005;</span>}
+        </div>
       </nav>
     </header>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Info() {
   return (
-    <section className="info">
+    <section className="info" id="about">
       <div className="info__content">
         <h2 className="title">À propos de moi</h2>
         <div className="info__flex ">
@@ -21,7 +21,7 @@ function Info() {
               <strong>informatique</strong>, et je souhaite transformer cette
               passion en une carrière. Mon objectif est de continuer à
               développer mes compétences et mes connaissances dans ce vaste
-              univers de l'<strong>informatique</strong>. Je suis ouvert aux
+              univers qu'est l'<strong>informatique</strong>. Je suis ouvert aux
               opportunités d'emploi et aux projets futurs dans le domaine.
             </p>
             <p className="info__subtitle">

@@ -8,7 +8,8 @@ h3,
 h4,
 p,
 a,
-button {
+button,
+span {
   font-family: "Poppins", sans-serif;
 }
 
@@ -43,4 +44,10 @@ li {
 .title {
   text-align: center;
   font-size: 46px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
 }

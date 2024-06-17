@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function Portfolio() {
   return (
-    <section className="portfolio">
-      <h4 className="title">Portfolio</h4>
+    <section className="portfolio" id="portfolio">
+      <h2 className="title">Portfolio</h2>
       <div className="portfolio__container">
         {portfolio.map((card, index) => (
           <div className="portfolio__card" key={index}>
@@ -17,9 +17,16 @@ function Portfolio() {
                 <Link to={card.code} className="portfolio__btn">
                   Voir le code
                 </Link>
-                <Link to={card.site} className="portfolio__btn">
-                  Voir le site
-                </Link>
+                {card.site !== "" && (
+                  <Link to={card.site} className="portfolio__btn">
+                    Voir le site
+                  </Link>
+                )}
+                <div className="portfolio__competences">
+                  {card.competences.map((competence, i) => (
+                    <span key={i}>{competence}</span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
