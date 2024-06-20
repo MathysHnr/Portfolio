@@ -5,6 +5,10 @@
   }
   &__flex {
     @include flex-center;
+    box-shadow: 1px 1px 25px 0 #b8b5ff, 1px 6px 2px 0 rgb(182, 182, 182);
+    border-radius: 25px;
+    padding: 30px;
+    margin: 0 5%;
   }
   &__text {
     width: 70%;
@@ -16,6 +20,7 @@
   }
   &__cv {
     @include flex-center;
+    padding-top: 50px;
     a {
       text-decoration: none;
       color: $primary-color;
@@ -28,11 +33,33 @@
       cursor: pointer;
       transition: background 0.6s ease, color 0.4s ease, box-shadow 0.4s ease;
       border-radius: 4px;
-      :hover {
-        background: $secondary-color;
-        color: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      }
+    }
+    a:hover {
+      background: $secondary-color;
+      color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    &__flex {
+      flex-direction: column;
+    }
+    &__image {
+      display: none;
+    }
+    &__subtitle {
+      padding: 0 10px;
+      font-size: 14px;
+    }
+    &__flex {
+      margin: 0 1%;
+      padding: 15px 5px;
+    }
+    &__link {
+      font-size: 14px;
     }
   }
 }

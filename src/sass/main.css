@@ -115,26 +115,6 @@ li {
   background-image: url("https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg");
   background-size: cover;
 }
-@-webkit-keyframes slidein {
-  from {
-    background-position: top;
-    background-size: 3000px;
-  }
-  to {
-    background-position: -100px 0px;
-    background-size: 2750px;
-  }
-}
-@keyframes slidein {
-  from {
-    background-position: top;
-    background-size: 3000px;
-  }
-  to {
-    background-position: -100px 0px;
-    background-size: 2750px;
-  }
-}
 .profil__container {
   padding: 80px;
 }
@@ -151,13 +131,15 @@ li {
 }
 .profil__link {
   text-decoration: none;
-  color: #082ebd;
-  border: 3px solid;
+  color: #f0f0f0;
+  background-color: #082ebd;
+  border: none;
   padding: 15px;
+  transition: background 0.6s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 .profil__link:hover {
-  background-color: #082ebd;
-  color: #f0f0f0;
+  background-color: #f0f0f0;
+  color: #082ebd;
   border: none;
 }
 
@@ -171,6 +153,10 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 1px 1px 25px 0 #b8b5ff, 1px 6px 2px 0 rgb(182, 182, 182);
+  border-radius: 25px;
+  padding: 30px;
+  margin: 0 5%;
 }
 .info__text {
   width: 70%;
@@ -184,6 +170,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
 }
 .info__cv a {
   text-decoration: none;
@@ -198,12 +185,31 @@ li {
   transition: background 0.6s ease, color 0.4s ease, box-shadow 0.4s ease;
   border-radius: 4px;
 }
-.info__cv a :hover {
+.info__cv a:hover {
   background: #082ebd;
   color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+  .info__flex {
+    flex-direction: column;
+  }
+  .info__image {
+    display: none;
+  }
+  .info__subtitle {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .info__flex {
+    margin: 0 1%;
+    padding: 15px 5px;
+  }
+  .info__link {
+    font-size: 14px;
+  }
+}
 .competence {
   padding-top: 70px;
 }
@@ -324,8 +330,6 @@ li {
   border: none;
   padding: 10px;
   cursor: pointer;
-  width: 50%;
-  height: 20%;
 }
 
 .portfolio__btn:hover {
@@ -387,7 +391,7 @@ li {
   border: 2px solid #082ebd;
   padding: 10px;
   border-radius: 25px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
 }
 

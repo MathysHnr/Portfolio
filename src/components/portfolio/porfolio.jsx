@@ -22,11 +22,11 @@ function Portfolio() {
                     Voir le site
                   </Link>
                 )}
-                <div className="portfolio__competences">
-                  {card.competences.map((competence, i) => (
-                    <span key={i}>{competence}</span>
-                  ))}
-                </div>
+              </div>
+              <div className="portfolio__competences">
+                {card.competences.map((competence, i) => (
+                  <span key={i}>{competence}</span>
+                ))}
               </div>
             </div>
           </div>
