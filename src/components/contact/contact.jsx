@@ -86,9 +86,6 @@ function Contact() {
               >
                 <i className="fa-solid fa-at hover-color"></i>
               </Link>
-              <Link aria-label="Download Resume">
-                <i className="fa-solid fa-file hover-color"></i>
-              </Link>
             </div>
           </div>
           <div className="contact__right">

@@ -1,6 +1,6 @@
 import React from "react";
 import imagePortfolio from "../../assets/images/image_portfolio.png";
-import { Link } from "react-router-dom";
+import cv from "../../assets/CV_Mathys_Henneron.pdf";
 
 function Info() {
   return (
@@ -36,7 +36,14 @@ function Info() {
           </div>
         </div>
         <div className="info__cv">
-          <Link> Télechargez mon CV </Link>
+          <a
+            href={cv}
+            className="info__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Téléchargez mon CV
+          </a>
         </div>
       </div>
     </section>
