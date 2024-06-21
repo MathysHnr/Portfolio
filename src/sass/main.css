@@ -136,6 +136,7 @@ li {
   border: none;
   padding: 15px;
   transition: background 0.6s ease, color 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 .profil__link:hover {
   background-color: #f0f0f0;

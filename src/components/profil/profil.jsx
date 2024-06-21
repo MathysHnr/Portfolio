@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 function Profil() {
   return (
@@ -9,7 +9,14 @@ function Profil() {
           <h1 className="profil__title"> Henneron Mathys </h1>
           <p className="profil__subtitle">Développeur Front-end.</p>
         </div>
-        <Link className="profil__link">Contactez moi</Link>
+        <ScrollLink
+          to="contact"
+          className="profil__link"
+          smooth={true}
+          duration={500}
+        >
+          Contactez moi
+        </ScrollLink>
       </div>
     </section>
   );
